@@ -7,3 +7,15 @@ Ruby has very simple, useful functions that allow us to convert data from one ty
 <br>
 Thats not to say that Javascript isn't able to covert from one type to another, but its not always intuitive.
 
+Need to add
+<br>
+Sort-by
+Uniq
+Zip
+Exit
+Gets
+Rand
+Uniq
+Shuffle
+replace (effectively slice)
+
