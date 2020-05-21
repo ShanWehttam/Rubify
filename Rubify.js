@@ -1,9 +1,5 @@
-Object.getOwnPropertyNames(''.__proto__).difference(['anchor', 'constructor', 'big', 'blink', 'bold', 'charCodeAt', 'codePointAt', 'concat', 'endsWith', 'fontcolor', 'fixed', 'fontsize', 'italics', 'link', 'localeCompare', 'match', 'normalize', 'padEnd', 'padStart', 'search', 'small', 'strike', 'sub', 'substr', 'sup', 'startsWith', 'toString', "trimStart", "trimLeft", "trimEnd", "trimRight", 'valueOf', "toLocaleLowerCase", "toLocaleUpperCase" ]).sort()
-
-Object.getOwnPropertyNames([].__proto__).difference(['entries', 'constructor', 'fill', 'keys', 'reduceRight', 'toLocaleString', 'values' ]).sort()
-
-var _ = require('lodash');
-
+Object.getOwnPropertyNames(''.__proto__).difference(['anchor', 'constructor', 'big', 'blink', 'bold', 'charCodeAt', 'codePointAt', 'concat', 'endsWith', 'fontcolor', 'fixed', 'fontsize', 'italics', 'link', 'localeCompare', 'match', 'matchAll', 'normalize', 'padEnd', 'padStart', 'search', 'small', 'strike', 'sub', 'substr', 'sup', 'startsWith', 'toString', "trimStart", "trimLeft", "trimEnd", "trimRight", 'valueOf', "toLocaleLowerCase", "toLocaleUpperCase" ]).sort()
+Object.getOwnPropertyNames([].__proto__).difference(['entries', 'constructor', 'fill', 'find', 'forEach', 'keys', 'reduceRight', 'toLocaleString', 'values' ]).sort()
 
 
 String.prototype.to_object = function(){
@@ -97,15 +93,7 @@ Object.prototype.merge = function(target, ...sources){
 console.log(  {}.merge({me: "you"}, {him: "her"}, {hm: 'hm'})  )
 
 
-function pickBy(object) {
-  const obj = {};
-  for (const key in object) {
-      if (object[key]) {
-          obj[key] = object[key];
-      }
-  }
-  return obj;
-} 
+
 
 String.prototype.reverse = function(){
   self.split('').reverse().join('')
