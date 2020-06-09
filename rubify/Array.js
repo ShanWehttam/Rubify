@@ -165,3 +165,33 @@ const range = (start, stop, step) => Array.from({ length: (stop - start) / step 
 //   if(start === end) return [start];
 //   return [start, ...range(start + 1, end)];
 // }
+
+Array.prototype.partition = function(callback) {
+  len = this.length
+  ary = []
+  counter = 0
+ Mapper = this.map( (elem, ind, thisary => {
+    if (let call = callback.call(self, element, counter)){
+       Return [elem]
+    } else {
+  return [elem]
+}
+return mapper
+}
+
+Array.prototype.group_by = function(callback) {
+  len = this.length
+  groups = {}
+  counter = 0
+    while (counter < len) {
+      if (counter in this) {
+element = this[counter]
+        mappedValue = callback.call(this, element);
+groups[mappedValue].push(element) || []
+console.log(mappedValue)
+      }
+      counter += 1;
+    }
+  return groups;
+}
+
