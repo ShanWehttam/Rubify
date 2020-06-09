@@ -14,3 +14,8 @@ String.prototype.count = function(countChar){
   const upperOrLower = (char) => char === countChar || char === countChar.toUpperCase()
   return this.split("").filter(upperOrLower).length
 }
+
+String.prototype.to_number = function(){
+  return Number(this)
+};
+"2".to_number()
