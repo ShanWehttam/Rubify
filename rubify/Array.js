@@ -195,3 +195,17 @@ console.log(mappedValue)
   return groups;
 }
 
+Array.prototype.my_map = function(callback) {
+  len = this.length
+  ary = []
+  counter = 0
+    while (counter < len) {
+      if (counter in this) {
+        element = this[counter]
+        mappedValue = callback.call(self, element, counter); //this is automatically added as the first arg
+        ary.push(mappedValue);
+      }
+      counter += 1;
+    }
+  return ary;
+}
