@@ -20,6 +20,18 @@ Array.prototype.each_slice = function(size){
 //[1,2,3,4,5].each_slice(2)
 // [ [ 1, 2 ], [ 3, 4 ], [ 5 ] ]
 
+Array.prototype.each_slice = function(size){
+  counter = 0
+  len = this.length
+  new_ary = []
+  while (counter < len) {
+    new_ary.push([this.slice(counter ,counter + size )])
+    counter += size
+  }
+  return new_ary
+}
+
+
 Array.prototype.to_object_list = function(){
   return [[1,2],[3,4],[5,6]].map( arg => ({[arg[0]]:arg[1]}) )
 }
