@@ -127,6 +127,13 @@ Object.prototype.group_by = function(callback) {
 }
 ({me: "you", they: "they"}).group_by( ([key, val]) => val.length)
 
+Array.prototype.insert = function(index, new_elem, take = 0) {
+  index === -1 ? index = this.length : index
+  this.splice(index,take,new_elem)
+  return this
+}
+
+
 
 var grouped = ['one', 'two', 'three'].reduce((r, v, i, a, k = v.length) => ((r[k] || (r[k] = [])).push(v), r), {})
 var grouped = [1.3, 2.1, 2.4].reduce((r, v, i, a, k = Math.floor(v)) => ((r[k] || (r[k] = [])).push(v), r), {})
